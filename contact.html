@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Go to home">YourName</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-controls="nav-menu" aria-expanded="false">☰</button>
+        <ul id="nav-menu" class="nav__list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div>
+        <h1>Contact</h1>
+        <p>If you'd like to collaborate or have a project in mind, feel free to reach out.</p>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></li>
+          <li><strong>Location:</strong> Your City, Country</li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contactForm" aria-label="Contact form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Send</button>
+        <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="socials">
+        <a href="#">GitHub</a>
+        <a href="https://www.linkedin.com/in/abinesh-senthil-507719273/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+        <a href="#">Naukri</a>
+      </div>
+    </div>
+  </footer>
+  <script defer src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Go to home">YourName</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-controls="nav-menu" aria-expanded="false">☰</button>
+        <ul id="nav-menu" class="nav__list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-header">
+        <h1>Projects</h1>
+        <a class="btn btn--small" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="projects">
+        <article class="project">
+          <h3>Project One</h3>
+          <p>A responsive web app that demonstrates modern UI patterns and clean architecture.</p>
+          <ul class="tags">
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>API</li>
+          </ul>
+          <div class="project__actions">
+            <a class="btn btn--ghost btn--small" href="#" aria-disabled="true">Live</a>
+            <a class="btn btn--small" href="#" aria-disabled="true">Code</a>
+          </div>
+        </article>
+        <article class="project">
+          <h3>Project Two</h3>
+          <p>Node.js REST API with authentication, validation, and testing.</p>
+          <ul class="tags">
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Jest</li>
+          </ul>
+          <div class="project__actions">
+            <a class="btn btn--ghost btn--small" href="#" aria-disabled="true">Live</a>
+            <a class="btn btn--small" href="#" aria-disabled="true">Code</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="socials">
+        <a href="#">GitHub</a>
+        <a href="https://www.linkedin.com/in/abinesh-senthil-507719273/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+        <a href="#">Naukri</a>
+      </div>
+    </div>
+  </footer>  
+  <script defer src="js/main.js"></script>
+</body>
+</html>

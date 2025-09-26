@@ -1,0 +1,144 @@
+:root{
+  --bg: #0b1220;
+  --bg-elev: #0f172a;
+  --surface: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #22c55e;
+  --primary-600: #16a34a;
+  --card: #0f172a;
+  --border: #1f2937;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 70% -10%, #192339 0%, transparent 60%) ,
+              linear-gradient(180deg, #0b1220 0%, #0b1220 100%);
+  min-height:100vh; /* ensure full viewport height */
+  display:flex;      /* enable sticky footer layout */
+  flex-direction:column;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background: linear-gradient(180deg, rgba(11,18,32,0.9) 0%, rgba(11,18,32,0.6) 100%);
+  backdrop-filter:saturate(180%) blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.header-inner--no-logo{justify-content:flex-end}
+.logo{font-weight:800;color:#fff;text-decoration:none;font-size:1.1rem}
+.nav__toggle{display:none;background:none;border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:8px}
+.nav__list{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+.nav__list a{color:var(--muted);text-decoration:none;font-weight:500}
+.nav__list a:hover{color:#fff}
+
+/* Hero */
+.hero{padding:56px 0 16px;background: radial-gradient(900px 480px at 20% -10%, #1e293b 0%, transparent 60%)}
+.hero__inner{display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:center}
+.eyebrow{color:var(--muted);font-weight:600;margin:0 0 6px}
+.hero h1{font-size:2.4rem;margin:0 0 10px}
+.accent{color:var(--primary)}
+.subtitle{color:var(--muted);max-width:48ch}
+.actions{display:flex;gap:12px;margin-top:16px}
+
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:12px;padding:10px 14px;font-weight:600;text-decoration:none;border:1px solid var(--border);color:#fff;background:var(--surface);box-shadow: var(--shadow)}
+.btn[aria-disabled="true"]{opacity:.6;pointer-events:none}
+.btn--primary{background:linear-gradient(180deg, var(--primary) 0%, var(--primary-600) 100%);border-color:transparent}
+.btn--ghost{background:#0b1220}
+.btn--small{padding:8px 12px;border-radius:10px}
+
+.hero__photo .photo-card{width:100%;aspect-ratio:4/5;border-radius:18px;background:url('../image/Abi1.jpg') center/cover no-repeat;box-shadow: var(--shadow);border:1px solid rgba(255,255,255,.06)}
+
+/* Generic sections */
+.section{padding:56px 0}
+.section:last-of-type{padding-bottom:16px}
+.section--compact{padding:32px 0}
+.section--tight{padding:40px 0 8px}
+.section.alt{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0) 70%)}
+.section h1{margin-top:0;margin-bottom:14px}
+.muted{color:var(--muted)}
+
+.grid-2{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+.info-list{display:grid;gap:10px}
+.info-item{display:flex;justify-content:space-between;gap:16px;background:var(--card);border:1px solid var(--border);padding:12px 14px;border-radius:12px}
+.info-item span{color:var(--muted)}
+
+/* Skills */
+.skills-intro{margin-top:4px;margin-bottom:10px}
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:12px}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
+.skill-card .row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.badge{background:#0b1220;border:1px solid var(--border);padding:4px 8px;border-radius:8px;color:#cbd5e1;font-weight:600;font-size:.8rem}
+.progress{height:8px;background:#0b1220;border:1px solid var(--border);border-radius:999px;overflow:hidden}
+.progress__bar{display:block;height:100%;background:linear-gradient(90deg,#22c55e,#06b6d4)}
+.skills{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:8px 0 0}
+.skills li{padding:8px 12px;border:1px solid var(--border);background:var(--card);border-radius:999px}
+
+/* Timeline */
+.timeline{position:relative;margin-top:10px}
+.timeline::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:#23314d}
+.timeline__item{position:relative;padding-left:28px;margin:18px 0}
+.timeline__item .dot{position:absolute;left:4px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--primary)}
+.timeline__item .content{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px}
+
+/* Projects */
+.section-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+.project{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+.tags{display:flex;gap:8px;list-style:none;margin:10px 0 0;padding:0}
+.tags li{padding:6px 10px;border-radius:999px;background:#0b1220;border:1px solid var(--border);color:var(--muted)}
+.project__actions{display:flex;gap:10px;margin-top:12px}
+
+/* Contact */
+.contact-list{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:6px}
+.contact-form{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+.field{display:grid;gap:6px;margin-bottom:12px}
+.field input,.field textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:#0b1220;color:var(--text)}
+.field input:focus,.field textarea:focus{outline:2px solid #334155}
+
+/* New Hero Layout */
+.hero-new{padding:40px 0;min-height:calc(100vh - 120px);display:flex;align-items:center}
+.hero-title{font-size:2.5rem;font-weight:800;color:#fff;margin:0 0 40px;text-align:left}
+.hero-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-photo{display:flex;justify-content:center}
+.photo-main{width:400px;height:500px;border-radius:20px;background:url('../image/Abi1.jpg') center/cover no-repeat;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+.hero-services{display:flex;flex-direction:column;gap:24px}
+.service-item h2{font-size:1.8rem;font-weight:700;color:#fff;margin:0;line-height:1.3}
+.work-cta{margin-top:20px}
+.work-link{color:#fff;text-decoration:underline;font-size:1.1rem;font-weight:600}
+.work-link:hover{color:var(--primary)}
+
+@media (max-width: 980px){
+  .hero-layout{grid-template-columns:1fr;gap:40px;text-align:center}
+  .photo-main{width:300px;height:375px}
+  .hero-title{text-align:center}
+}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--border);padding:10px 0;color:var(--muted);text-align:center;margin-top:auto}
+.footer-inner{display:flex;justify-content:flex-start}
+.socials{display:flex;gap:50px}
+.socials a{color:var(--muted);text-decoration:none;font-weight:500}
+.socials a:hover{color:#fff}
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero__inner{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .projects{grid-template-columns:1fr}
+  .skill-grid{grid-template-columns:1fr}
+}
+@media (max-width: 760px){
+  .nav__toggle{display:inline-flex}
+  .nav__list{position:absolute;right:20px;top:58px;flex-direction:column;background:var(--card);border:1px solid var(--border);padding:12px;border-radius:12px;display:none}
+  .nav__list.open{display:flex}
+}
